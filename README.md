@@ -1,2 +1,2 @@
 # sudoku
-Solving sudoku puzzle
+Solving sudoku puzzle.
