@@ -19,4 +19,4 @@ You are required to enter two quantities:
 2. Thresh_amount.  
 If the image has black lines, the tresh_amount variable should take the amount of 200. And if the image has light gray lines, the tresh_amount variable should take the amount of 240 or 250.  
   
-  Problem: Sometimes, the CNN model is not able to recognize all initial numbers on the board correctly, so the rest of the program will not be able to solve the puzzel completely and correctly.
+  Problem: when the CNN model is not able to recognize all initial numbers on the board correctly, the rest of the program will not be able to solve the puzzel completely and correctly.
