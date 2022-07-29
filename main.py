@@ -234,7 +234,6 @@ def solver(ar):
 
                         ar[row][col] = li[0]
                         cv2.putText(image, str(li[0]), (15+col*50, 35+row*50), cv2.FONT_HERSHEY_SIMPLEX, 0.95, (0,255,0), 2)
-
                         to_li.pop()
                         place.pop()
 
@@ -271,7 +270,6 @@ def solver(ar):
 
                     ar[n][k] = lst[0]
                     cv2.putText(image, str(lst[0]), (15+k*50, 35+n*50), cv2.FONT_HERSHEY_SIMPLEX, 0.95, (0,255,0), 2)
-
                     to_li.pop()
                     place.pop()
 
@@ -308,7 +306,6 @@ def solver(ar):
 
                     ar[r][k] = lst[0]
                     cv2.putText(image, str(lst[0]), (15+k*50, 35+r*50), cv2.FONT_HERSHEY_SIMPLEX, 0.95, (0,255,0), 2)
-
                     to_li.pop()
                     place.pop()
 
@@ -341,7 +338,6 @@ def solver(ar):
 
                 r_c = place[int(keys[i])]
                 ar[r_c[0]][r_c[1]] = A[i]
-
                 cv2.putText(image, str(A[i]), (15 + r_c[1]*50, 35 + r_c[0]*50), cv2.FONT_HERSHEY_SIMPLEX, 0.95, (0,255,0), 2)
 
         return ar
@@ -373,20 +369,20 @@ def solver(ar):
         return ar
 
 
-    for i in range(10):
+    for j in range(5):
 
-        ar = box_result(box_check, 0, 0, appreared_once)
-        ar = box_result(box_check, 0, 3, appreared_once)
-        ar = box_result(box_check, 0, 6, appreared_once)
-        ar = box_result(box_check, 3, 0, appreared_once)
-        ar = box_result(box_check, 3, 3, appreared_once)
-        ar = box_result(box_check, 3, 6, appreared_once)
-        ar = box_result(box_check, 6, 0, appreared_once)
-        ar = box_result(box_check, 6, 3, appreared_once)
-        ar = box_result(box_check, 6, 6, appreared_once)
+        for i in range(9):
 
+            ar = box_result(box_check, 0, 0, appreared_once)
+            ar = box_result(box_check, 0, 3, appreared_once)
+            ar = box_result(box_check, 0, 6, appreared_once)
+            ar = box_result(box_check, 3, 0, appreared_once)
+            ar = box_result(box_check, 3, 3, appreared_once)
+            ar = box_result(box_check, 3, 6, appreared_once)
+            ar = box_result(box_check, 6, 0, appreared_once)
+            ar = box_result(box_check, 6, 3, appreared_once)
+            ar = box_result(box_check, 6, 6, appreared_once)
 
-    for i in range(5):
 
         for k in range(9):
 
@@ -394,20 +390,20 @@ def solver(ar):
             ar = row_col_result(column_check, k, appreared_once)
 
 
+
 image = draw_chart()
 
 # The correct amount of "thresh_amount" plays a crucial role to solve the puzzle.
 # If the input image has light gray lines: thresh_amount = 250 or 240
 # If the input image has black lines: thresh_amount = 200 or 220
-thresh_amount = 240
-coor, num_coor, labels = predict_initial_numbers("zm12.png", thresh_amount)
+thresh_amount = 200
+coor, num_coor, labels = predict_initial_numbers("simple_sudoku.png", thresh_amount)
 
 ord_xy = fix_contour_randomness(coor)
 
 ar = create_sudoku_array(num_coor, labels, ord_xy)
 
 solver(ar)
-
 
 cv2.imshow('sudoku', image)
 cv2.waitKey()
