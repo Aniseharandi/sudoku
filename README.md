@@ -6,7 +6,7 @@ Sudoku is played on a 9x9 grid and it is also separated into 9 boxes (each box i
 
 ## Methods to solve the puzzle
 I used a CNN model to recognize the initial handful numbers on the board, and contours to find the coordination of them.  
-The algorithm used to solve the puzzle: I started from the topleft box, searching for a grid that has only one possibility, then moved to the next box and did the same, till the last box. I repearted this action a few times to ensure all the grids would fill.
+The algorithm used to solve the puzzle: I started from the topleft box, searching for a grid that has only one possibility, then moved to the next box and did the same, till the last box. I repeated this action a few times to ensure all the grids would fill.
 
 ## How to use this repo
 Input: a sudoku puzzle image (the image should not have title or written texts on or around the puzzle).  
