@@ -5,7 +5,7 @@ This project is able to solve easy-to-medium level Sudoku puzzles where there is
 Sudoku is played on a 9x9 grid and it is also separated into 9 boxes (each box is a 3x3 grid). The initial configuration of Sudoku is a partially filled board. We need to figure out how to put the digits 1-9 on the grid so that each digit appears exactly once in each row, column, and box.
 
 ## Methods to solve the puzzle
-I used a CNN model to recognize the initial handful numbers on the board, then used contours to find the coordination of them.  
+I used a CNN model to recognize the initial handful numbers on the board, and contours to find the coordination of them.  
 The algorithm used to solve the puzzle: I started from the topleft box, searching for a grid that has only one possibility, then moved to the next box and did the same, till the last box. I repearted this action a few times to ensure all the grids would fill.
 
 ## How to use this repo
