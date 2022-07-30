@@ -12,7 +12,7 @@ The algorithm used to solve the puzzle: I started from the topleft box, searchin
 The main.py contains the code to solve the puzzle. The cnn9k.h5 is the saved model used in the code to predict the initial numbers on the board, and simple_sudoku.png is an example picture of sudoku puzzle using for test of the model.  
 
   Input: a sudoku puzzle image (the image should not have title or written texts on or around the puzzle).  
-output: a completed sudoku puzzle image.
+Output: a completed sudoku puzzle image.
 
 ![git](https://user-images.githubusercontent.com/103570811/179358848-96765be3-0b94-4f75-8e8c-cc6a8a29eb0c.png)
 
