@@ -9,7 +9,9 @@ I used a CNN model to recognize the initial handful numbers on the board, and co
 The algorithm used to solve the puzzle: I started from the topleft box, searching for a grid that has only one possibility, then moved to the next box and did the same, till the last box. I repeated this action a few times to ensure all the grids would fill.
 
 ## How to use this repo
-Input: a sudoku puzzle image (the image should not have title or written texts on or around the puzzle).  
+The main.py contains the code to solve the puzzle. The cnn9k.h5 is the saved model used in the code to predict the initial numbers on the board, and simple_sudoku.png is an example picture of sudoku puzzle using for test of the model.  
+
+  Input: a sudoku puzzle image (the image should not have title or written texts on or around the puzzle).  
 output: a completed sudoku puzzle image.
 
 ![git](https://user-images.githubusercontent.com/103570811/179358848-96765be3-0b94-4f75-8e8c-cc6a8a29eb0c.png)
